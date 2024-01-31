@@ -10,9 +10,7 @@ body{
     align-items: center;
     height:100vh;
 }
-
 .container{
-
     position:relative;
     display:flex;
     justify-content: center;
@@ -28,16 +26,17 @@ body{
 
 .h,.vert1,.vert2{
     background: rgb(10,72,227);
-    background: linear-gradient(312deg, rgba(10,72,227,1) 0%, rgba(222,31,31,1) 35%, rgba(181,16,16,1) 100%);
+    background: linear-gradient(312deg, rgba(10,72,227,1) 0%, rgba(222,31,31,1) 45%, rgba(181,16,16,1) 100%);
+    border-radius: 10px;
 }
 .h{
-    width:40vw;
+    width:45vw;
     height: 1.8vh;
 }
 .play{
-    width:10vw;
-    height:10vh;
-    background-color: grey;
+    width:13vw;
+    height:12.2vh;
+    background-color: rgba(26, 24, 24, 0.82);
 }
 .vert1,.vert2{
     z-index: 1;
@@ -46,19 +45,21 @@ body{
     position:absolute;
 }
 .vert1{
-    right:14.2vw;
+    right:12.7vw;
 }
 .vert2{
-    left:14.2vw;
+    left:12.7vw;
 }
 
-
-
-
-/*
-<div class="play"></div>
-            <div class="v"></div>
-            <div class="play"></div>
-            <div class="v"></div>
-            <div class="play"></div>
-*/
+.tleft{
+    border-top-left-radius: 10px;
+}
+.tright{
+    border-top-right-radius: 10px;
+}
+.bleft{
+    border-bottom-left-radius: 10px;
+}
+.bright{
+    border-bottom-right-radius: 10px;
+}
