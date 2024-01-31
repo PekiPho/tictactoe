@@ -1,7 +1,6 @@
 *{
     margin:0;
     padding:0;
-    background-color: rgba(0, 0, 0, 0.79);
 }
 
 body{
@@ -9,6 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height:100vh;
+    background-color: rgba(0, 0, 0, 0.79);
 }
 .container{
     position:relative;
@@ -63,3 +63,9 @@ body{
 .bright{
     border-bottom-right-radius: 10px;
 }
+
+
+/*
+background-color: rgba(26, 24, 24, 0.82);
+background-color: rgba(0, 0, 0, 0.79);
+*/
