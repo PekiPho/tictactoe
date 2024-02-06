@@ -10,6 +10,13 @@ body{
     height:100vh;
     background-color: rgba(0, 0, 0, 0.79);
 }
+
+@font-face {
+    font-family: 'Protest Riot';
+    font-weight: 400;
+    src: url('assets/ProtestRiot-Regular.woff2') format('woff2');
+}
+
 .container{
     position:relative;
     display:flex;
@@ -38,6 +45,7 @@ body{
     width:13vw;
     height:12.2vh;
     background-color: rgba(26, 24, 24, 0.82);
+    font-family: 'Protest Riot';
 
     display: flex;
     justify-content: center;
