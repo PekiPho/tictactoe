@@ -16,8 +16,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:40vh;
-    width: 40vw;
+    height:50vh;
+    width: 50vw;
+    font-size:8vh;
 }
 .row{
     display:flex;
@@ -37,7 +38,16 @@ body{
     width:13vw;
     height:12.2vh;
     background-color: rgba(26, 24, 24, 0.82);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.disabledDiv{
+    pointer-events: none;
+}
+
 .vert1,.vert2{
     z-index: 1;
     height:50vh;
@@ -45,10 +55,10 @@ body{
     position:absolute;
 }
 .vert1{
-    right:12.7vw;
+    right:17.6vw;
 }
 .vert2{
-    left:12.7vw;
+    left:17.6vw;
 }
 
 .tleft{
