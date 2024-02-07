@@ -11,6 +11,7 @@ let playerX=document.querySelector('.px');
 let playerO=document.querySelector('.po');
 playerX.textContent=0;
 playerO.textContent=0;
+playerX.style.textShadow="black 5px 0 3px,black 5px 0 25px"
 
 for(var i=0; i<3; i++) {
     matrix[i] = new Array(3).fill(0);
@@ -30,6 +31,18 @@ play.forEach((e)=>{
         } 
         e.classList.add('disabledDiv');
         z=-z;
+
+        if(z===1)
+        {
+            playerO.style.textShadow="";
+            playerX.style.textShadow="black 5px 0 3px,black 5px 0 25px"
+        }
+        else if(z===-1)
+        {
+            playerX.style.textShadow="";
+            playerO.style.textShadow="black 5px 0 3px,black 5px 0 25px"
+        }
+
         noMoves++;
         if(noMoves===9)
             resetGame();
