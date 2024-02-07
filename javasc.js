@@ -5,6 +5,13 @@ row[2]=document.querySelector('.r3').children;
 
 let z=1;
 let matrix = [];
+let s;
+let noMoves=0;
+let playerX=document.querySelector('.px');
+let playerO=document.querySelector('.po');
+playerX.textContent=0;
+playerO.textContent=0;
+
 for(var i=0; i<3; i++) {
     matrix[i] = new Array(3).fill(0);
 }
@@ -23,6 +30,9 @@ play.forEach((e)=>{
         } 
         e.classList.add('disabledDiv');
         z=-z;
+        noMoves++;
+        if(noMoves===9)
+            resetGame();
         checkWin();
     });
 });
@@ -35,15 +45,23 @@ function getValues(){
         }
     }
 }
-function resetGame(a){
-    if(a===15)
-        console.log('X wins');
-    else console.log('O wins');
+function resetGame(){
+    for(let i=0;i<3;i++)
+    {
+        s[i]=0;
+        for(let j=0;j<3;j++)
+        {
+            matrix[i][j]=0;
+            row[i][j].textContent='';
+            row[i][j].classList.remove('disabledDiv');
+            row[i][j].id=Math.abs(row[i][j].id);
+        }
+    }
 }
 
 function checkWin(){
     getValues();
-    let s=new Array(8).fill(0);
+    s=new Array(8).fill(0);
     for(let i=0;i<3;i++){
         s[0]+=matrix[i][i];
         s[1]+=matrix[0][i];
@@ -56,7 +74,15 @@ function checkWin(){
     }
     for(let i=0;i<8;i++)
     {
-        if(Math.abs(s[i])===15)
-            resetGame(s[i]);
+        if(s[i]===15)
+        {
+            playerX.textContent++;
+            resetGame();
+        }
+        else if(s[i]===-15)
+        {
+            playerO.textContent++;
+            resetGame();
+        }
     }
 }

@@ -4,9 +4,11 @@
 }
 
 body{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
     height:100vh;
     background-color: rgba(0, 0, 0, 0.79);
 }
@@ -80,6 +82,41 @@ body{
 }
 .bright{
     border-bottom-right-radius: 10px;
+}
+.head{
+    position:absolute;
+    top:0;
+    height:10vh;
+    width:100vw;
+    background-color: rgba(26, 24, 24, 0.82);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    background: -webkit-linear-gradient(rgba(10,72,227,1), rgba(181,16,16,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 20vw;
+}
+.px,.po,.score{
+    height:10vh;
+    font-size:7vh;
+    font-family: 'Protest Riot';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.px,.po{
+    width:40vw;
+}
+.px{
+    color:#de1f1f;
+}
+.po{
+    color:rgba(10,72,227,1);
 }
 
 
