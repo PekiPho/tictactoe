@@ -57,6 +57,7 @@ function resetGame(){
             row[i][j].id=Math.abs(row[i][j].id);
         }
     }
+    noMoves=0;
 }
 
 function checkWin(){
